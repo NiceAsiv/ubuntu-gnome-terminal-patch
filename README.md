@@ -1,6 +1,6 @@
 # Terminal selection copy and right-click paste function
 
-Based on personal-testing,this method is applicable to gnome-terminal versions 3.36 to 3.44.
+Based on personal-testing,this method is applicable to gnome-terminal versions 3.36 to 3.44 in ubuntu22.
 
 **0x01.Get the gnome terminal source code**
 
