@@ -2,7 +2,7 @@
 
 Based on personal-testing,this method is applicable to gnome-terminal versions 3.36 to 3.44 in ubuntu22.
 
-[zh_CN 简体中文](https://github.com/NiceAsiv/ubuntu-gnome-terminal-patch/edit/main/README.zh_CN.md)
+[Chinese 简体中文](https://github.com/NiceAsiv/ubuntu-gnome-terminal-patch/blob/main/README.zh_CN.md)
 
 **0x01.Get the gnome terminal source code**
 
