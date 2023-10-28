@@ -1,0 +1,66 @@
+Format: 1.8
+Date: Mon, 28 Mar 2022 08:51:15 -0400
+Source: gnome-terminal
+Binary: gnome-terminal gnome-terminal-data nautilus-extension-gnome-terminal
+Built-For-Profiles: noudeb
+Architecture: all amd64
+Version: 3.44.0-1ubuntu1
+Distribution: jammy
+Urgency: medium
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Changed-By: Jeremy Bicha <jbicha@ubuntu.com>
+Description:
+ gnome-terminal - GNOME terminal emulator application
+ gnome-terminal-data - Data files for the GNOME terminal emulator
+ nautilus-extension-gnome-terminal - GNOME terminal emulator application - Nautilus extension
+Launchpad-Bugs-Fixed: 1922839
+Changes:
+ gnome-terminal (3.44.0-1ubuntu1) jammy; urgency=medium
+ .
+   * Merge with debian, remaining changes:
+     + gnome-terminal.wrap, debian/rules:
+       - Add a wrapper script to restore command line compatibility.
+     + debian/control.in:
+       - gnome-terminal depends on python3, python3-gi and gir1.2-glib-2.0 for
+         the wrapper script.
+       - add a build dependency on gettext to match the use of the i18n meson
+         module
+     + Add 0001-Restore-transparency.patch:
+       - Restore transparency support
+     + Add 0001-Add-style-classes-and-CSS-names-to-some-of-our-widge.patch:
+       - Add CSS names and style classes so we can theme things more easily.
+     + Add 0001-screen-window-Extra-padding-around-transparent-termi.patch:
+       - Fix transparency on Wayland. Patch by Owen Taylor, via Debarshi Ray @
+         Fedora
+     + Add 52_support_apturl.patch:
+       - Support apt: urls.
+     + Add 60_add_lp_handler.patch:
+       - Add a handler for launchpad bug URLs.
+     + Add scrollbar-background-theming.patch:
+       - Draw background under the scrollbar that matches the actual terminal
+         background color. This allows proper theming.
+     + Add screen-Use-clean-env-when-creating-new-tab.patch:
+       - Fix environment variables on opening new tab via the "Open in
+         Terminal" right click menu in Nautilus. (LP: #1922839)
+Checksums-Sha1:
+ 8b68ee8f58a37a1e62310a61c0990ca95b866d70 1079928 gnome-terminal-data_3.44.0-1ubuntu1_all.deb
+ f36f0d681146b7eee34965d2cdcdbbc2b46fc5a1 494766 gnome-terminal-dbgsym_3.44.0-1ubuntu1_amd64.ddeb
+ 58e9dcb9dc624406d6f16eb98a154c78db932e2d 26929 gnome-terminal_3.44.0-1ubuntu1_amd64.buildinfo
+ 559a418e922d322da9869e96cda98a223539dbd1 216066 gnome-terminal_3.44.0-1ubuntu1_amd64.deb
+ 6c9a2c4b06522f9f90a6fed399e9071dc69a8430 52748 nautilus-extension-gnome-terminal-dbgsym_3.44.0-1ubuntu1_amd64.ddeb
+ 8260b4ad4d9a398545104b889b0ad1981d3ca702 50916 nautilus-extension-gnome-terminal_3.44.0-1ubuntu1_amd64.deb
+Checksums-Sha256:
+ 0fd0dab31e8db1e04eeb8905c84f31c36404cb2bebbdebd100939fc1283c2a83 1079928 gnome-terminal-data_3.44.0-1ubuntu1_all.deb
+ f0ca54a241af539c138bb08541707910aa935ce747992e6a3a8d09ff3bcaaf82 494766 gnome-terminal-dbgsym_3.44.0-1ubuntu1_amd64.ddeb
+ c5868ff7bb1623d6d36d367df979acdb5a7e4a55d264e977736c7e43ac080486 26929 gnome-terminal_3.44.0-1ubuntu1_amd64.buildinfo
+ 251d0b5c1615a035e97c4cd5cbce6caee5fea25e1c3bf3a5724aa8262f02ed47 216066 gnome-terminal_3.44.0-1ubuntu1_amd64.deb
+ 349fde7caa4cdb9ca48a876e5c67fa8bb42580430bd75d6d78097100184e8b1e 52748 nautilus-extension-gnome-terminal-dbgsym_3.44.0-1ubuntu1_amd64.ddeb
+ 5a0b768dfba448669afbd486a8bf82f054ad5c50fd874a1f820cba21b456953b 50916 nautilus-extension-gnome-terminal_3.44.0-1ubuntu1_amd64.deb
+Files:
+ 13cf5d209bd8c1605f50ddc6f2fcecd1 1079928 gnome optional gnome-terminal-data_3.44.0-1ubuntu1_all.deb
+ d0977a9029438a33687dbbf96e753f6a 494766 debug optional gnome-terminal-dbgsym_3.44.0-1ubuntu1_amd64.ddeb
+ 1baee7d86e586dbd6b1d35a287992da3 26929 gnome optional gnome-terminal_3.44.0-1ubuntu1_amd64.buildinfo
+ ca726d6233c66049b4024ef81c7af7e8 216066 gnome optional gnome-terminal_3.44.0-1ubuntu1_amd64.deb
+ 1da3dc0721a3d5c753aaf625b940ece4 52748 debug optional nautilus-extension-gnome-terminal-dbgsym_3.44.0-1ubuntu1_amd64.ddeb
+ eb88486ab83b202d88215dd77b1d169e 50916 gnome optional nautilus-extension-gnome-terminal_3.44.0-1ubuntu1_amd64.deb
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
