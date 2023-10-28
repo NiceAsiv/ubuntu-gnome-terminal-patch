@@ -1,4 +1,3 @@
-# ubuntu-gnome-terminal-patch
 # Terminal selection copy and right-click paste function
 
 Based on personal-testing,this method is applicable to gnome-terminal versions 3.36 to 3.44.
