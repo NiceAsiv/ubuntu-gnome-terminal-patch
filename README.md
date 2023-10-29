@@ -4,7 +4,7 @@ Based on personal-testing,this method is applicable to gnome-terminal versions 3
 
 [Chinese 简体中文](https://github.com/NiceAsiv/ubuntu-gnome-terminal-patch/blob/main/README.zh_CN.md)
 
-**0x01.Get the gnome terminal source code**
+## **0x01.Get the gnome terminal source code**
 
 ```shell
 sudo apt-get update
