@@ -203,6 +203,8 @@ sudo dpkg -i gnome-terminal_3.44.0-1ubuntu1_amd64.deb
 
 ![image-20231028222659981](https://cdn.niceasiv.cn/image-20231028222659981.png)
 
+Enjoy!
+
 
 
 Restart the terminal, and you will be able to get Terminal selection copy and right-click paste function
