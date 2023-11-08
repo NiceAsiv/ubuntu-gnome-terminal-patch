@@ -82,7 +82,8 @@ terminal_screen_button_press (GtkWidget      *widget,
             //return TRUE;
  
           //terminal_screen_do_popup (screen, event, hyperlink, url, url_flavor, number_info);
-          // 注释上面的三行代码，直接跳过跳出右键菜单（在3.44版本）
+          // 注释上面的三行代码，直接跳过跳出右键菜单
+          //并增加下面vte的代码调用（在3.44版本）
           vte_terminal_paste_clipboard (VTE_TERMINAL (screen));
           
           hyperlink = nullptr; /* adopted to the popup info */
