@@ -63,10 +63,10 @@ terminal_screen_class_init (TerminalScreenClass *klass)
   widget_class->style_updated = terminal_screen_style_updated;
   widget_class->drag_data_received = terminal_screen_drag_data_received;
   widget_class->button_press_event = terminal_screen_button_press;
+//Bind the execution function for button press event
   widget_class->button_release_event = terminal_screen_button_release;
   widget_class->popup_menu = terminal_screen_popup_menu;
   widget_class->hierarchy_changed = terminal_screen_hierarchy_changed;
-//Bind the execution function for button press event
   terminal_class->child_exited = terminal_screen_child_exited;
 ```
 
@@ -133,7 +133,7 @@ terminal_screen_button_press (GtkWidget      *widget,
            * the client, and popup only if that's not handled. */
           //if (button_press_event && button_press_event (widget, event))
            // return TRUE;
-          terminal_screen_do_popup (screen, event, hyperlink, url, url_flavor, number_info, timestamp_info);
+          //terminal_screen_do_popup (screen, event, hyperlink, url, url_flavor, number_info, timestamp_info);
           // Comment out the above 3 lines of code logic, directly call the paste function
           //add this in version 3.44
           vte_terminal_paste_clipboard (VTE_TERMINAL (screen));
