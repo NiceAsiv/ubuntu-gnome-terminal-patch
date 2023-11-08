@@ -56,10 +56,10 @@ terminal_screen_class_init (TerminalScreenClass *klass)
   widget_class->style_updated = terminal_screen_style_updated;
   widget_class->drag_data_received = terminal_screen_drag_data_received;
   widget_class->button_press_event = terminal_screen_button_press;
+// 绑定按压释放事件的执行函数
   widget_class->button_release_event = terminal_screen_button_release;
   widget_class->popup_menu = terminal_screen_popup_menu;
   widget_class->hierarchy_changed = terminal_screen_hierarchy_changed;
-  // 绑定按压释放事件的执行函数
   terminal_class->child_exited = terminal_screen_child_exited;
 ```
 
@@ -76,8 +76,13 @@ terminal_screen_button_press (GtkWidget      *widget,
     {
       if (!(event->state & (GDK_SHIFT_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK)))
         {
-          // ... 代码略
-          // 添加这一行（在3.44版本）
+          /* on right-click, we should first try to send the mouse event to
+           * the client, and popup only if that's not handled. */
+          //if (button_press_event && button_press_event (widget, event))
+            //return TRUE;
+ 
+          //terminal_screen_do_popup (screen, event, hyperlink, url, url_flavor, number_info);
+          // 注释上面的三行代码，直接跳过跳出右键菜单（在3.44版本）
           vte_terminal_paste_clipboard (VTE_TERMINAL (screen));
           
           hyperlink = nullptr; /* adopted to the popup info */
